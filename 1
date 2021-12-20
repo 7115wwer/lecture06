@@ -1,0 +1,13 @@
+из  набора  решений sympy import  , symbols , Interval , Min , Max , sqrt , sin , cos , pi
+x  =  символы ( 'x' )
+lower_bound  =  int ( input ( 'Значение, где область определения функции:' ))
+upper_bound  =  int ( input ( 'Значение, где область определения функции:' ))
+е  =  х ** 2
+
+нули  =  набор решений ( f , x , домен = интервал ( нижняя_ граница , верхняя_ граница ))
+утверждать  нули . is_FiniteSet
+res_min  =  Min ( f . subs ( x , lower_bound ), f . subs ( x , upper_bound ), * [ f . subs ( x , i ) для  i  в  нулях ])
+res_max  =  Макс ( f . subs ( x , lower_bound ), f . subs ( x , upper_bound ), * [ f . subs ( x , i ) для  i  в  нулях ])
+
+print ( 'Где экстремум равен =' , res_max )
+print ( 'Где инфимум равенство =' , res_min )
